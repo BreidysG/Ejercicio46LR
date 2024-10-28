@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fijación sobre Textos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FIJACIÓN SOBRE TEXTOS</h1>
+        <div id="info">
+            <p>Este ejercicio está formado por un texto presentado en dos columnas estilo periodístico y atravesados por líneas verticales. Debes centrar la mirada en las líneas verticales de cada columna mientras la deslizas hacia abajo como lo va indicando la placa visualizadora.</p>
+            <p>Las líneas verticales te indican las fijaciones que debes hacer para cada línea de texto.</p>
+            <p>Lo ideal es que disminuyas el número de fijaciones que realiza el ojo al leer y puedas percibir por cada línea de texto, y con un solo golpe de vista, tres o más palabras.</p>
+            <p>Este ejercicio te servirá para ampliar tu ángulo lector y así captar más palabras con una sola fijación.</p>
+            <p>Es bueno que trabajes comprensión lectora, por lo tanto intenta comprender sin realizar vocalización o subvocalización.</p>
+        </div>
+        <div id="controles" class="controls">
+            <label for="speed">Selecciona la velocidad (milisegundos por fijación):</label>
+            <input type="number" id="speed" value="300">
+            <button id="start-btn">Iniciar</button>
+        </div>
+        <div id="text-container" class="hidden">
+            <div id="column-left" class="column left-column hidden">
+                <p>Había una vez un viejo castillo en lo alto de una colina,</p>
+                <p>rodeado de densos bosques y envuelto en leyendas de tiempos antiguos.</p>
+                <p>En sus muros de piedra, se decía, vivía un espíritu guardián,</p>
+                <p>protector de los secretos de la familia que había habitado allí durante siglos.</p>
+                <p>Cada noche, cuando el viento soplaba entre las ramas de los árboles,</p>
+                <p>los aldeanos escuchaban susurros que parecían venir de las ventanas vacías.</p>
+                <p>Los pocos valientes que se atrevían a acercarse,</p>
+                <p>juraban haber visto luces parpadear en las torres del castillo.</p>
+                <p>Y aunque todos en el pueblo temían al espíritu,</p>
+                <p>sabían que el castillo estaba ahí para protegerlos de algún mal desconocido,</p>
+                <p>algo que siempre había acechado en las sombras del bosque profundo.</p>
+                <p>Los ancianos contaban que el espíritu era en realidad el alma del último caballero del castillo,</p>
+                <p>que había jurado proteger el pueblo de cualquier mal aún después de la muerte.</p>
+                <p>La leyenda decía que él había combatido criaturas del bosque oscuro y secretos de magia antigua.</p>
+                <p>Así, generación tras generación, el castillo permaneció en pie, recordatorio de su eterno vigilante.</p>
+            </div>
+            
+            <div id="column-right" class="column right-column hidden">
+                <p>Una joven aventurera llamada Luna llegó un día al pueblo,</p>
+                <p>atraída por las historias del castillo encantado.</p>
+                <p>Curiosa y sin miedo, decidió descubrir los secretos que guardaba el lugar.</p>
+                <p>Subió la colina, armada solo con una linterna y un viejo mapa,</p>
+                <p>guiada por la luz de la luna que iluminaba el camino.</p>
+                <p>Al llegar a las puertas del castillo, sintió una extraña energía a su alrededor,</p>
+                <p>como si alguien o algo la estuviera esperando.</p>
+                <p>Al entrar, las sombras parecían moverse en las paredes,</p>
+                <p>y sus pasos resonaban en los pasillos vacíos.</p>
+                <p>Sin detenerse, Luna exploró cada rincón,</p>
+                <p>encontrando finalmente una sala secreta llena de antiguos libros y objetos misteriosos.</p>
+                <p>Uno de los libros parecía brillar tenuemente, como si la invitara a abrirlo.</p>
+                <p>Con cautela, lo tomó en sus manos y leyó palabras que parecían susurradas desde otro mundo.</p>
+                <p>Las páginas hablaban de tiempos antiguos, de la protección del castillo, y de un secreto que solo ella podría revelar.</p>
+                <p>Decidida, Luna aceptó la misión que el espíritu del caballero le encomendó, con la promesa de proteger el pueblo como él lo había hecho.</p>
+            </div>
+            
+            
+            <!-- Dos líneas verticales en cada columna -->
+            <div id="line1" class="vertical-line left-line1 hidden"></div>
+            <div id="line2" class="vertical-line left-line2 hidden"></div>
+            <div id="line3" class="vertical-line right-line1 hidden" ></div>
+            <div id="line4" class="vertical-line right-line2 hidden"></div>
+        </div>
+        <div id="timer" class="hidden">Tiempo: 3:00</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
