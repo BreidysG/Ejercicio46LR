@@ -9,15 +9,15 @@ body {
     background-color: #e9ecef; /* Fondo más claro y moderno */
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden; /* Evitar desplazamiento */
+    align-items: flex-start; /* Cambiado para evitar el corte en la vista móvil */
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos la altura de la pantalla */
+    overflow-x: hidden; /* Evitar desplazamiento horizontal */
     background-image: url(2.png);
     background-size: cover;
 }
 
-body p{
-    font-family:Georgia, 'Times New Roman', Times, serif;
+body p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 17px;
     line-height: 20px;
 }
@@ -26,10 +26,10 @@ body p{
     text-align: center;
     width: 90%;
     max-width: 1200px; /* Limitar el ancho máximo */
-    /*height: 90vh;  Asegura que todo el contenido esté visible */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start; /* Cambiado para que el contenido se alinee al inicio */
+    align-content: center;
     border-radius: 10px; /* Bordes redondeados */
     background-color: #fff; /* Fondo blanco */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Sombra más suave */
@@ -61,6 +61,7 @@ body p{
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap; /* Permitir que los controles se ajusten en pantallas pequeñas */
 }
 
 input[type="number"] {
@@ -69,6 +70,7 @@ input[type="number"] {
     border-radius: 4px;
     margin-right: 10px;
     font-size: 16px;
+    width: auto; /* Ajustar el ancho automáticamente */
 }
 
 button {
@@ -88,15 +90,16 @@ button:hover {
 
 #text-container {
     display: flex;
-    justify-content: center;
-    height: 500px;
+    justify-content: space-between; /* Asegura que haya espacio entre columnas */
+    height: auto; /* Permitir que la altura sea automática */
     position: relative;
     gap: 20px; /* Espacio entre columnas */
     padding: 10px;
+    flex-wrap: wrap; /* Permitir que las columnas se ajusten en pantallas pequeñas */
 }
 
 .column {
-    width: 50%;
+    flex: 1 1 calc(50% - 10px); /* Permitir que las columnas crezcan y se encojan */
     background-color: white;
     padding: 15px;
     border: 1px solid #ccc;
@@ -111,7 +114,7 @@ button:hover {
     position: absolute;
     width: 2px;
     height: 100%;
-    background-color:#333;
+    background-color: #333;
 }
 
 .left-line1 {
@@ -131,7 +134,7 @@ button:hover {
 }
 
 .highlight {
-    background-color:#75b8ff; /* Color de resaltado */
+    background-color: #75b8ff; /* Color de resaltado */
     transition: background-color 0.3s; /* Transición suave */
 }
 
@@ -154,10 +157,13 @@ button:hover {
         transform: translateY(100%);
     }
 }
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .container {
+        align-items: center;
         padding: 15px;
+        transform: scale(0.6);
     }
 
     #info {
@@ -181,10 +187,6 @@ button:hover {
         font-size: 14px;
     }
 
-    #text-container {
-        flex-direction: column; /* Cambiar a una columna en pantallas pequeñas */
-        align-items: center; /* Centrar columnas */
-    }
 
     .column {
         flex: 1 1 100%; /* Las columnas ocuparán el 100% del ancho en pantallas pequeñas */
@@ -193,13 +195,13 @@ button:hover {
     }
 
     #timer {
-        font-size: 20px;
+        width: 140%;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        padding: 10px;
+        width: 100%;
     }
 
     #info {
